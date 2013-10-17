@@ -1,7 +1,7 @@
 <?php
 define('DEBUG_MODE',0);
 // database host
-$db_host   = "localhost:3306";
+$db_host   = "ec.upfdc.com:3306";
 
 // database name
 $db_name   = "ecupfdc";
