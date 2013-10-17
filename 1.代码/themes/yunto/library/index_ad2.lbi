@@ -1,1 +1,0 @@
-<ul><li style="background:url(data/afficheimg/bg_20131014gkcvey.jpg);"><img src="data/afficheimg/20131014tzmeka.png" alt="#"/></li><li style="background:url(data/afficheimg/bg_20131014dkwbhr.jpg);"><img src="data/afficheimg/20131014ccwcgo.png" alt="#"/></li></ul>
