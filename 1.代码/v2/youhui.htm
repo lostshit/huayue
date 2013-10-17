@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>华悦城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="华悦城" />
+<meta name="description" content="华悦城" />
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script src='js/scrollIt.min.js' type='text/javascript'></script>
+<script>$(function() { $.scrollIt(); });</script>
+<link href="common.css" rel="stylesheet" type="text/css" />
+
+<style>
+.slideTxtBox{ }
+.slideTxtBox .hd{background:url(images/line2.gif) no-repeat left center; height:30px; margin-bottom:10px;  position:relative; }
+.slideTxtBox .hd ul{ float:left;  position:absolute; left:10px; top:-1px; height:32px;   }
+.slideTxtBox .hd ul li{ float:left; background:#e9e9e9; padding:0 1em; width:6em; margin:0 10px 0 0; height:30px; color:#999; text-align:center; line-height:30px; white-space:nowrap; cursor:pointer;  }
+.slideTxtBox .hd ul li.on{ color:#fff;  background:#002c63;  }
+
+.slideTxtBox .bd ul{ padding:15px;  zoom:1;  }
+.slideTxtBox .bd li{ height:24px; line-height:24px;   }
+.slideTxtBox .bd li .date{ float:right; color:#999;  }
+
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+.slideTxtBox .arrow{  position:absolute; right:10px; top:0; }
+.slideTxtBox .arrow a{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;
+	 cursor:pointer; background:url("../images/arrow.png") 0 0 no-repeat; }
+.slideTxtBox .arrow .next{ background-position:0 -50px;  }
+.slideTxtBox .arrow .prevStop{ background-position:-60px 0; }
+.slideTxtBox .arrow .nextStop{ background-position:-60px -50px; }
+
+/*滚动图片*/
+.pic_slide{ position: relative; border: 1px solid #dcdddd; padding: 4px; overflow: hidden; width: 390px; }
+.pic_slide .bigImg{ position: relative; margin-bottom:5px;}
+.pic_slide .bigImg li img{ vertical-align:middle; width:390px; height:260px;   }
+.pic_slide .bigImg  h4{ font-size: 14px; font-weight: bold; line-height: 33px; height: 33px; padding-right: 30px; overflow: hidden; text-align: left; }
+
+.pic_slide .smallScroll{ height: 47px; margin-bottom: 6px;}
+.pic_slide .sPrev,.pic_slide .sNext{ float: left; display: block; width: 14px; height: 62px; text-indent: -9999px; background: url(images/spin.png) no-repeat 0 0px; }
+.pic_slide .sNext{ background-position: 0 -62px;}
+.pic_slide .sPrev:hover{ background-position: 0 -124px;}
+.pic_slide .sNext:hover{ background-position: 0 -186px;}
+
+.pic_slide .smallImg{ float:left;  margin: 0 6px; display:inline; width: 350px; overflow: hidden;}
+.pic_slide .smallImg ul{ height:62px;  width: 9999px; overflow: hidden; }
+.pic_slide .smallImg li{ float: left; padding: 0 4px 0 0; width:90px; cursor:pointer;  display: inline;  }
+.pic_slide .smallImg img{ border: 1px solid #dcdddd; width:90px; height:60px;  }
+.pic_slide .smallImg .on img{ border-color: #1e50a2;}
+
+.pic_slide .pageState{ position: absolute; top: 235px; right: 5px; font-family: "Times New Roman", serif; letter-spacing: 1px;}
+.pic_slide .pageState span{ color: #f00; font-size: 16px;}
+
+
+</style>
+
+</head>
+
+<!--从这里开始-->
+<body id="youhui">
+
+<div style="background:#4e4e4e; height:30px;" data-scroll-index="0">
+  <div class="top">
+    	<div class="fl"><a href="user.php?act=login">[登录]</a><a href="user.php?act=register">[免费注册]</a>
+    <h1>华悦城上销售中心可享受独家购房优惠！</h1></div>
+        <div class="fr"><img src="images/weibo.png" width="62" height="22" /></div><div class="fr fr1"><a href="#">加入收藏</a> | <a href="#">设为首页</a></div>
+    </div>
+</div>
+<div class="cl"></div>
+<div style="border-bottom:1px solid #4e4e4e; height:60px; padding:7px 0 0;">
+<div class="head">
+    <h1 class="logo fl"><a href="/"><img src="images/logo.jpg"  /></a></h1>
+
+    <div class="nav fr">
+       <ul>
+    	<li><a href="/" >首页</a></li>
+                        
+                	<li><a href="/category.php?id=14" >马赛会馆</a></li>
+                        
+                	<li><a href="/category.php?id=1" >泡芙街</a></li>
+                        
+                	<li><a href="#" >优惠活动</a></li>
+                        
+                	<li><a href="/user.php" >用户中心</a></li>
+                         
+          
+        </ul>
+  </div>
+</div>
+</div>
+
+
+
+<div class="h20 cl"></div>
+
+<div class="yh w990">
+
+<img src="images/t5.jpg" class="b_pic" />
+<div class="txts">
+    <div id="txt1">1栋</div>
+    <div id="txt2">在售房源</div>
+    <div id="txt3">59</div>
+    <div id="txt4">套</div>
+</div>
+<img src="images/t6.png" class="l_pic" />
+<div style="height:420px; width:530px; overflow: auto; position:absolute; left:420px; top:20px;">
+<table class="tb2" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>户型</th>
+    <th>楼层</th>
+    <th>户型面积</th>
+    <th>平方单价</th>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+    <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+    <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+  <tr>
+    <td><a href="/goods.php?id=9">三室二厅</a></td><td><a href="/goods.php?id=9">15/30F</a></td><td><a href="/goods.php?id=9">98M<sup>2</sup></a></td><td><a href="/goods.php?id=9">7200元/平米</a></td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div class="cl h20"></div>
+<div class="guide w990 clearfix">
+	<div class="item">
+      <a href="#">楼盘资讯 价值评估</a>
+      <a href="#">个性化职业顾问提供</a>
+      <a href="#">定制化看房线路推荐</a>
+      <a href="#">看房行程预定</a>
+    </div>
+     
+     <div class="item">
+      <a href="#">免费注册</a>
+      <a href="#">独家购房优惠</a>
+      <a href="#">实名认证会员服务</a>
+     </div>
+     
+     <div class="item">
+      <a href="#">网上银行支付</a>
+      <a href="#">支付保证金</a>
+      <a href="#">取得竞买资格认证</a>
+     </div>
+     
+     <div class="item">
+      <a href="#">参与拍卖</a>
+      <a href="#">在线买房</a>
+      <a href="#">公平保证</a>
+      <a href="#">保证交易</a>
+     </div>
+     
+     <div class="item">
+      <a href="#">购房成功签订购房合同</a>
+      <a href="#">不成功100%全额退款</a>
+     </div>
+</div>
+</div>
+  
+<div class="h20"></div>
+<div class="footer w990">
+    <div class="fl">
+						   							<a href="http://ec.upfdc.com" >华悦城网销中心简介</a> | 
+																				  							<a href="#" >合作伙伴</a> | 
+																				  							<a href="#" >联系我们</a> | 
+																				  							<a href="#" >诚聘英才</a> | 
+																				  							<a href="#" >产品答疑</a> | 
+																				  							<a href="#" >客户投诉</a> | 
+													  	<br />
+    Copyright © 2010-2013 Huayuecheng Corporation, All Rights Reserved<br />
+    免责声明:一切房源价格和优惠信息请以售楼部现场为准,最终解释权归湖南华盛世纪城房地产开发有限公司所有   
+    <div class="line"></div>
+    华悦城、产品咨询购买、技术支持客服服务热线:400-090-7310		全程支持：<strong>云图EM</strong> 技术服务：<strong>共成互动</strong>
+	
+	<div align="left"  id="rss"><a href="feed.php"><img src="/themes/yunto/images/xml_rss2.gif" alt="rss" /></a></div>
+												  						  <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=287499308&amp;Site=华悦城房地产网销中心&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:287499308:4" height="16" border="0" alt="QQ" /> 287499308</a>
+						  						  						  						  						  						  						  						  						  						  						  						  						  					  		</div>
+    
+    <div class="fr"><img src="/themes/yunto/images/logo2.jpg" width="242" height="103" /></div>
+</div>
+
+<!--所有滚动代码-------------------->
+
+<script type="text/javascript">
+
+////////////////////tab横向标签
+jQuery(".slideTxtBox").slide(
+{mainCell:".bd"}
+);
+
+
+/////////////////////大图切换
+jQuery(".pic_slide").slide({ titCell:".smallImg li", mainCell:".bigImg", effect:"fold", autoPlay:true,delayTime:200,
+	startFun:function(i,p){
+		//控制小图自动翻页
+		if(i==0){ jQuery(".pic_slide .sPrev").click() } else if( i%4==0 ){ jQuery(".pic_slide .sNext").click()}
+	}
+});
+
+//小图左滚动切换
+jQuery(".pic_slide .smallScroll").slide({ mainCell:"ul",delayTime:100,vis:4,scroll:4,effect:"left",autoPage:true,prevCell:".sPrev",nextCell:".sNext",pnLoop:false });
+</script>         
+</body>
+</html>

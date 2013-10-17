@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>华悦城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="华悦城" />
+<meta name="description" content="华悦城" />
+
+
+<link href="common.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<style>
+#obj{ position:relative}
+#obj a{ position:absolute; display:block;-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	overflow:hidden;
+	background:#ff0;
+	width: 50px;
+	height: 20px;
+	}
+	#obj a:hover{ background:#F60; text-decoration: none; color:#fff}
+a#a1{
+	
+	left: 335px;
+	top: 166px;
+}
+
+a#a2{
+
+	left: 489px;
+	top: 112px;
+}
+
+a#a3{
+	left: 526px;
+	top: 190px;
+}
+</style>
+
+</head>
+
+<!--从这里开始-->
+<body id="home">
+
+<div style="background:#4e4e4e; height:30px;" data-scroll-index="0">
+  <div class="top">
+    	<div class="fl"><a href="#">[登录]</a><a href="#">[免费注册]</a>
+    <h1>华悦城上销售中心可享受独家购房优惠！</h1></div>
+        <div class="fr"><img src="images/weibo.png" width="62" height="22" /></div><div class="fr fr1"><a href="#">加入收藏</a> | <a href="#">设为首页</a></div>
+    </div>
+</div>
+<div class="cl"></div>
+<div style="border-bottom:1px solid #4e4e4e; height:60px; padding:7px 0 0;">
+<div class="head">
+    <h1 class="logo fl"><a href="/"><img src="images/logo.jpg"  /></a></h1>
+</div>
+</div>
+
+
+
+<div class="h10 cl"></div>
+
+<!--主要部分-->
+<div class="w990 clearfix" style="padding:50px 0 0; text-align:center">
+<div id="overscroll" style="height: 400px;width: 600px; overflow:hidden; margin:auto; border:1px solid #eee;">
+    <div id="obj"><img src="images/t12.jpg" width="800" height="600" / >
+    <a href="#" id="a1">1号楼</a>
+    <a href="#" id="a2">2号楼</a>
+    <a href="#" id="a3">3号楼</a>
+    </div>
+     </div>
+</div>
+
+<script src="js/jquery.overscroll.js"></script>
+	<script>
+		$(function(o){
+			o = $("#overscroll").overscroll({
+				cancelOn: '.no-drag',
+//				captureWheel: false,
+//				hoverThumbs: true,
+//				persistThumbs: true,
+//				showThumbs: false,
+				scrollLeft: 0,
+				scrollTop: 0
+			}).on('overscroll:dragstart overscroll:dragend overscroll:driftstart overscroll:driftend', function(event){
+				console.log(event.type);
+			});
+			$("#link").click(function(){
+				if(!o.data("dragging")) {
+					console.log("clicked!");
+				} else {
+					return false;
+				}
+			});
+		});
+</script>
+    
+<!--页尾--------------------->  
+<div class="cl h20"></div>
+<div class="footer w990">
+<!--链接地图--><!--页尾-->
+<div class="line1"></div>
+<div class="h20"></div>
+    <div class="fl">万科网销中心简介 | <a href="#">关于长沙万科</a> | 合作伙伴 | 联系我们 | 诚聘英才 | 产品答疑 | 客户投诉<br />
+    Copyright © 2010-2013 Huayuecheng Corporation, All Rights Reserved<br />
+    免责声明:一切房源价格和优惠信息请以售楼部现场为准,最终解释权归长沙万科房地产开发有限公司所有   
+    <div class="line"></div>
+    长沙万科、产品咨询购买、技术支持客服服务热线：400-090-7310 		全程支持：<strong>云图EM</strong> 技术服务：<strong>共成互动</strong></div>
+    
+    <div class="fr"><img src="images/logo2.jpg" width="242" height="103" /></div>
+</div>
+
+<!--所有滚动代码-------------------->
+
+<script type="text/javascript">
+
+////////////////////tab横向标签
+jQuery(".slideTxtBox").slide(
+{mainCell:".bd"}
+);
+
+
+/////////////////////大图切换
+jQuery(".pic_slide").slide({ titCell:".smallImg li", mainCell:".bigImg", effect:"fold", autoPlay:true,delayTime:200,
+	startFun:function(i,p){
+		//控制小图自动翻页
+		if(i==0){ jQuery(".pic_slide .sPrev").click() } else if( i%4==0 ){ jQuery(".pic_slide .sNext").click()}
+	}
+});
+
+//小图左滚动切换
+jQuery(".pic_slide .smallScroll").slide({ mainCell:"ul",delayTime:100,vis:4,scroll:4,effect:"left",autoPage:true,prevCell:".sPrev",nextCell:".sNext",pnLoop:false });
+</script>         
+</body>
+</html>

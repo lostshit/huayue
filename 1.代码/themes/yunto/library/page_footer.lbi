@@ -1,0 +1,88 @@
+<!--底部导航 start-->
+<div class="h20"></div>
+<!--链接地图-->
+<div class="guide w990 clearfix">
+	<div class="item">
+      <a href="#">楼盘资讯 价值评估</a>
+      <a href="#">个性化职业顾问提供</a>
+      <a href="#">定制化看房线路推荐</a>
+      <a href="#">看房行程预定</a>
+    </div>
+     
+     <div class="item">
+      <a href="#">免费注册</a>
+      <a href="#">独家购房优惠</a>
+      <a href="#">实名认证会员服务</a>
+     </div>
+     
+     <div class="item">
+      <a href="#">网上银行支付</a>
+      <a href="#">支付保证金</a>
+      <a href="#">取得竞买资格认证</a>
+     </div>
+     
+     <div class="item">
+      <a href="#">参与拍卖</a>
+      <a href="#">在线买房</a>
+      <a href="#">公平保证</a>
+      <a href="#">保证交易</a>
+     </div>
+     
+     <div class="item">
+      <a href="#">购房成功签订购房合同</a>
+      <a href="#">不成功100%全额退款</a>
+     </div>
+</div>
+</div>
+
+  
+<!--页尾-->
+<div class="h20"></div>
+<div class="footer w990">
+    <div class="fl">
+	<!-- {if $navigator_list.bottom} -->
+					   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+							<a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a> | 
+							<!-- {if !$smarty.foreach.nav_bottom_list.last} -->
+							<!-- {/if} -->
+						  <!-- {/foreach} -->
+	<!-- {/if} --><br />
+    Copyright © 2010-2013 Huayuecheng Corporation, All Rights Reserved<br />
+    免责声明:一切房源价格和优惠信息请以售楼部现场为准,最终解释权归湖南华盛世纪城房地产开发有限公司所有   
+    <div class="line"></div>
+    华悦城、产品咨询购买、技术支持客服服务热线:<!-- 客服电话{if $service_phone} -->{$service_phone}<!-- 结束客服电话{/if} -->		全程支持：<strong>云图EM</strong> 技术服务：<strong>共成互动</strong>
+	
+	<div align="left"  id="rss"><a href="{$feed_url}"><img src="../images/xml_rss2.gif" alt="rss" /></a></div>
+	<!-- ICP 证书{if $icp_number} -->
+						{$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a>
+						<!-- 结束ICP 证书{/if} -->
+					<!-- QQ 号码 {foreach from=$qq item=im} -->
+						  <!-- {if $im} -->
+						  <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a>
+						  <!-- {/if} -->
+						  <!-- {/foreach} 结束QQ号码 -->
+						  <!-- 淘宝旺旺 {foreach from=$ww item=im} -->
+						  <!-- {if $im} -->
+						  <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a>
+						  <!-- {/if} -->
+						  <!--{/foreach} 结束淘宝旺旺 -->
+						  <!-- Yahoo Messenger {foreach from=$ym item=im} -->
+						  <!-- {if $im} -->
+						  <a href="http://edit.yahoo.com/config/send_webmesg?.target={$im}n&.src=pg" target="_blank"><img src="../images/yahoo.gif" width="18" height="17" border="0" alt="Yahoo Messenger" /> {$im}</a>
+						  <!-- {/if} -->
+						  <!-- {/foreach} 结束Yahoo Messenger -->
+						  <!-- MSN Messenger {foreach from=$msn item=im} -->
+						  <!-- {if $im} -->
+						  <img src="../images/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact={$im}">{$im}</a>
+						  <!-- {/if} -->
+						  <!-- {/foreach} 结束MSN Messenger -->
+						  <!-- Skype {foreach from=$skype item=im} -->
+						  <!-- {if $im} -->
+						  <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+						  <!-- {/if} -->
+					  <!-- {/foreach} -->
+	{if $stats_code}{$stats_code}{/if}
+	</div>
+    
+    <div class="fr"><img src="images/logo2.jpg" width="242" height="103" /></div>
+</div>

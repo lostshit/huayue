@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>华悦城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="华悦城" />
+<meta name="description" content="华悦城" />
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
+
+<script src='js/scrollIt.min.js' type='text/javascript'></script>
+<script>$(function() { $.scrollIt(); });</script>
+<link href="common.css" rel="stylesheet" type="text/css" />
+<!--<link href="bootstrap.css" rel="stylesheet" type="text/css" />-->
+<style>
+/* 滚动大图 */
+.slideBox{height:280px; margin:auto;overflow:hidden; position:relative}
+.slideBox .hd{
+	height:15px;
+	overflow:hidden;
+	position:absolute;
+	left:5%;
+	bottom:5%;
+	z-index:1;
+} 
+.slideBox .hd ul{overflow:hidden;zoom:1;float:left;}
+.slideBox .hd ul li{float:left;margin-right:10px;width:10px;height:10px;line-height:14px;text-align:center; text-indent:-999px;background:#fff;cursor:pointer;}
+.slideBox .hd ul li.on{background:#f00;color:#fff;}
+
+.slideBox .bd{position:relative;height:100%;z-index:0;}
+
+/* 滚动大图全宽居中设置 */
+.slideBox .bd li{ text-align:center;background-repeat:no-repeat; background-position:center top;}
+.slideBox .bd li a{ display:block;width:100%;height:280px; text-align:center; overflow:hidden}
+.slideBox .bd li img{}
+
+
+/* 文字横向滚动 */
+.txtScroll-left{ width:735px; float:right;   position:relative; height:20px; }
+.txtScroll-left .hd{ position: absolute; right:0; top:0; width:94px; height:20px;}
+.txtScroll-left .hd .prev,
+.txtScroll-left .hd .next,
+.txtScroll-left .hd .more{ display:block;  width:18px; height:18px; float:left; margin-right:5px;overflow:hidden; cursor:pointer; background:url("images/page.gif") no-repeat;}
+.txtScroll-left .hd .next{ background-position:-22px 0;  }
+.txtScroll-left .hd .more{ background-position:-44px 0; width:40px; height:18px; }
+
+.txtScroll-left .bd{ position:absolute;  width:600px; overflow:hidden; }
+.txtScroll-left .bd ul{ overflow:hidden; zoom:1; }
+.txtScroll-left .bd ul li{ margin:0 5px; padding:0 5px; text-align:center;  float:left; height:20px; line-height:20px; width:auto; border-right:1px solid #aaa;  text-align:left; _display:inline; text-align:center}
+.txtScroll-left .bd ul li a{ text-align:center; margin:auto}
+ 
+</style>
+
+</head>
+
+<!--从这里开始-->
+<body id="home">
+<!--跟随的滑块-->
+<div id="slide">
+<a href="#"  id="slide1">点击立即咨询</a>
+<a href="#" data-scroll-nav='0' id="slide2"></a>
+
+</div>
+
+
+
+<div style="background:#4e4e4e; height:30px;" data-scroll-index="0">
+  <div class="top">
+    	<div class="fl"><a href="#">[登录]</a><a href="#">[免费注册]</a>
+    <h1>华悦城上销售中心可享受独家购房优惠！</h1></div>
+        <div class="fr"><img src="images/weibo.png" width="62" height="22" /></div><div class="fr fr1"><a href="#">加入收藏</a> | <a href="#">设为首页</a></div>
+    </div>
+</div>
+
+<div style="border-bottom:1px solid #4e4e4e; height:60px; padding:7px 0 0;">
+<div class="head">
+    <h1 class="logo fl"><a href="/"><img src="images/logo.jpg"  /></a></h1>
+
+    <div class="nav fr">
+        <ul>
+          <li><a href="index.htm" id="a1">首页</a></li>
+          <li><a href="zaishou.htm" id="a2">在售房源</a></li>
+          <li><a href="tejia.htm" id="a3">特价房源</a></li>
+          <li><a href="youhui.htm" id="a12">优惠活动</a></li>
+          <li><a href="wkh.htm" id="a4">万客会</a></li>
+          
+        </ul>
+  </div>
+</div>
+</div>
+<div class="cl" style="height:1px"></div>
+<!--banner开始------------------------------------>
+
+<div class="slideBox">
+    <!--<div class="hd" >
+        <ul><li>1</li><li>2</li><li>3</li><li>4</li></ul>
+    </div>-->
+    
+    <div class="bd">
+        <ul>
+        <li style="background:url(images/b5.jpg) no-repeat center top;"><a href="#"><img  /></a></li>
+        <li style="background:url(images/b6.jpg) no-repeat center top;" ><a href="#"><img   /></a></li>
+        <li  style="background:#760"><a href="#"><img src="images/b3.jpg" width="1280" height="280" /></a></li>
+        <li  style="background:#660"><a href="#"><img src="images/b4.jpg" width="1280" height="280" /></a></li>
+        
+        </ul>
+    </div>
+</div>
+
+<!--banner结束------------------------------------>
+
+
+<div class="h10 cl"></div>
+<div class="w990">
+<!--5大特权 -->
+<div class="tequan">
+  <form id="member"><input name="" type="text" />
+    <a href="#"><img src="images/btn1.png" width="148" height="35" id="btn1" /></a>
+  </form>
+    <ul class="items">
+   	  <li id="i1">最长一周锁房服务</li>
+      <li id="i2">客服一对一在线贴心咨询</li>
+      <li id="i3">享受网上独家礼品</li>
+      <li id="i4">特别奖励积分</li>
+      <li id="i5">限时特供独家优惠资格</li>
+      <li id="i6">特约商家 保障资金安全</li>
+    </ul>
+</div>
+<div class="cl"></div>
+<!--房源展示区-->
+<div class="message">
+
+<h2>最新动态</h2>
+	
+        
+    <!--横向滚动-------------------->
+    <div class="txtScroll-left">
+		  <div class="hd">
+			  <a class="prev"></a>
+			  <a class="next"></a>
+              <a class="more"></a>
+				
+		  </div>
+		  <div class="bd">
+			  <ul class="infoList">
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">中国打破了世界软件巨头规则</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">施强：点击立即咨询点击立即咨询点击立即咨询教学</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">新加坡留学，国际双语课程</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">高考后留学日本名校随你选</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">教育培训行业优势资源推介</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">女友坚持警局完婚不抛弃</a></li>
+			  </ul>
+		  </div>
+    </div>
+        
+
+
+<!--横向滚动结束-------------------------------->
+</div>
+
+<div class="cl h20"></div>
+
+<div class="gflc"><img src="images/lc.gif" width="990" height="62" />
+<!--<a href="#">查看房源</a><a href="#">注册</a>订购</a><a href="#">支付保证金</a><a href="#">订购成功</a><a href="#">线下签约<br />
+退还保证金 </a>--></div>
+<div class="cl h20"></div>
+<ul class="fangyuan clearfix" data-scroll-index='1'>
+	<li id="l1">
+    	<a href="#"><img src="images/t6.jpg" /></a>
+        <div class="fy_txt">
+        	<div class="fl">A12栋1单元2302<br />
+两室两厅一卫<br />
+90.33㎡</div>
+        	<div class="fr">项目均价:7200元/㎡<br />
+一次性付款96折<br />
+按揭付款98折</div>
+        </div>
+    
+    	<div class="label1"></div>
+        <div class="label2">网络优惠价：<strong>6898</strong>元/㎡</div>
+        <div class="tejia"></div>
+    </li>
+    
+    <li><a href="#"><img src="images/t6.jpg" /></a>
+    <div class="fy_txt">
+        	<div class="fl">A12栋1单元2302<br />
+两室两厅一卫<br />
+90.33㎡</div>
+        	<div class="fr">项目均价:7200元/㎡<br />
+一次性付款96折<br />
+按揭付款98折</div>
+        </div>
+    	<div class="label1"></div>
+        <div class="label2">网络优惠价：<strong>6898</strong>元/㎡</div>
+        <div class="tejia"></div>
+    </li>
+    
+    <li><a href="#"><img src="images/t6.jpg" /></a>
+    <div class="fy_txt">
+        	<div class="fl">A12栋1单元2302<br />
+两室两厅一卫<br />
+90.33㎡</div>
+        	<div class="fr">项目均价:7200元/㎡<br />
+一次性付款96折<br />
+按揭付款98折</div>
+        </div>
+        
+    	<div class="label1"></div>
+        <div class="label2">网络优惠价：<strong>6898</strong>元/㎡</div>
+        <div class="tuangou"></div>
+    </li>
+    
+    <li><a href="#"><img src="images/t6.jpg" /></a>
+    
+    <div class="fy_txt">
+        	<div class="fl">A12栋1单元2302<br />
+两室两厅一卫<br />
+90.33㎡</div>
+        	<div class="fr">项目均价:7200元/㎡<br />
+一次性付款96折<br />
+按揭付款98折</div>
+        </div>
+        
+    	<div class="label1"></div>
+        <div class="label2">网络优惠价：<strong>6898</strong>元/㎡</div>
+        <div class="tejia"></div>
+    </li>
+</ul>
+
+<!--房源展示区-->
+<div class="message" style="background-image:url(images/tit1b.png)">
+
+<h2>最新动态</h2>
+	
+        
+    <!--横向滚动-------------------->
+    <div class="txtScroll-left">
+		  <div class="hd">
+			  <a class="prev"></a>
+			  <a class="next"></a>
+              <a class="more"></a>
+				
+		  </div>
+		  <div class="bd">
+			  <ul class="infoList">
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">中国打破了世界软件巨头规则</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">施强：高端专业语言教学</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">新加坡留学，国际双语课程</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">高考后留学日本名校随你选</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">教育培训行业优势资源推介</a></li>
+				  <li><a href="http://www.SuperSlide2.com" target="_blank">女友坚持警局完婚不抛弃</a></li>
+			  </ul>
+		  </div>
+    </div>
+        
+
+
+<!--横向滚动结束-------------------------------->
+</div>
+<div class="cl h20"></div>
+<!--图片广告-->
+<div class="pic_inline"><img src="images/t1.jpg"  /><img src="images/t2.jpg"  /><img src="images/t3.jpg"  /></div>
+
+<div class="h20"></div>
+<!--链接地图-->
+<div class="guide clearfix">
+	<div class="item">
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+    </div>
+     
+     <div class="item">
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+     </div>
+     
+     <div class="item">
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+     </div>
+     
+     <div class="item">
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+     </div>
+     
+     <div class="item">
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+      <a href="#">楼盘咨询 价值评估</a>
+     </div>
+</div>
+</div>
+
+  
+<!--页尾-->
+<div class="h20"></div>
+<div class="footer w990">
+    <div class="fl">万科网销中心简介 | <a href="#">关于长沙万科</a> | 合作伙伴 | 联系我们 | 诚聘英才 | 产品答疑 | 客户投诉<br />
+    Copyright © 2010-2013 Huayuecheng Corporation, All Rights Reserved<br />
+    免责声明:一切房源价格和优惠信息请以售楼部现场为准,最终解释权归长沙万科房地产开发有限公司所有   
+    <div class="line"></div>
+    长沙万科、产品咨询购买、技术支持客服服务热线：400-090-7310 		全程支持：<strong>云图EM</strong> 技术服务：<strong>共成互动</strong></div>
+    
+    <div class="fr"><img src="images/logo2.jpg" width="242" height="103" /></div>
+</div>
+
+<!--所有滚动代码-------------------->
+
+<script type="text/javascript">
+
+
+$(".fangyuan li").hover(
+	
+	function(){
+		var _this=$(this);
+		TweenMax.to(			_this.children('.fy_txt'), 0.5, {css:{opacity:'1'}}				);
+		_this.children('.label1').hide(200);
+		_this.children('.label2').hide(200);
+				},
+	function(){
+		var _this=$(this);
+		TweenMax.to(
+				$(".fangyuan li .fy_txt"), 0.5, {css:{opacity:'0'}});
+				_this.children('.label1').show(200);
+		_this.children('.label2').show(200);
+	}
+
+);
+
+jQuery(".slideBox").slide( { 
+	mainCell:".bd ul",
+	autoPlay:true,
+
+	vis:2
+	} );
+
+
+jQuery(".txtScroll-left").slide(
+{titCell:".hd ul",
+	mainCell:".bd ul",
+	autoPage:true,
+	effect:"leftLoop",
+	autoPlay:true,
+	scroll:1,
+	vis:4
+	});
+</script>           
+</body>
+</html>

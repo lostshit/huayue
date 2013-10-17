@@ -1,0 +1,32 @@
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<div style="background:#4e4e4e; height:30px;" data-scroll-index="0">
+  <div class="top">
+    	<div class="fl"><a href="user.php?act=login">[登录]</a><a href="user.php?act=register">[免费注册]</a>
+    <h1>华悦城网上销售中心可享受独家购房优惠！</h1></div>
+        <div class="fr"><wb:follow-button uid="2568352944" type="red_1" width="67" height="24" ></wb:follow-button></div><div class="fr fr1"><a href="#">加入收藏</a> | <a href="#">设为首页</a></div>
+    </div>
+</div>
+
+<div style="border-bottom:1px solid #4e4e4e; height:60px; padding:7px 0 0;">
+<div class="head">
+    <h1 class="logo fl"><a href="/"><img src="images/logo.jpg"  /></a></h1>
+
+    <div class="nav fr">
+        <ul>
+<!--{if $navigator_list.top}-->
+
+    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+	<li><a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a></li>
+            <!-- {if !$smarty.foreach.nav_top_list.last} -->
+            
+            <!-- {/if} -->
+    <!-- {/foreach} -->
+<!-- {/if} -->         
+          
+        </ul>
+  </div>
+</div>
+</div>
+<div class="cl" style="height:1px"></div>
